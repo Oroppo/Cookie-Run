@@ -15,10 +15,10 @@ public class Accelerometer : MonoBehaviour
 
     void Update()
     {
-        Vector3 tilt = Input.acceleration;
+        Vector2 tilt = Input.acceleration;
 
         if (isFlat)
-            tilt = Quaternion.Euler(90, 0, 0) * tilt;
+            tilt = Quaternion.Euler(90, 0, 0) * (tilt * 5);
 
         rb.AddForce(tilt);
 

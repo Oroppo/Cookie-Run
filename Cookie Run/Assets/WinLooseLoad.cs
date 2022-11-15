@@ -14,7 +14,7 @@ public class WinLooseLoad : MonoBehaviour
     // Update is called once per frame
     void Update()
     {
-        if (Player.transform.position.y < -30)
+        if (Player.transform.position.y < -45)
         {
             SceneManager.LoadScene("LoseScreen");
         }

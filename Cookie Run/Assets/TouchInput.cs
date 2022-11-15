@@ -12,10 +12,10 @@ public class TouchInput : MonoBehaviour
     }
     private void Update()
     {
-        rb.velocity = transform.forward * 2;
+        rb.velocity = new Vector3(0,0,1) ;
     }
     public void Jump()
     {
-        rb.velocity += transform.up * 3;
+        rb.velocity += new Vector3(0, 1, 0);
     }
 }

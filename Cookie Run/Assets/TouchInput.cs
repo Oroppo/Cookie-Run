@@ -5,18 +5,19 @@ using UnityEngine;
 public class TouchInput : MonoBehaviour
 {
     Rigidbody rb;
-
+    bool canJump=false;
     private void Start()
     {
         rb = GetComponent<Rigidbody>();
     }
     private void Update()
     {
-        rb.velocity = new Vector3(0,0,1) ;
+        rb.AddForce(0,0,2) ;
     }
     public void Jump()
     {
-        Debug.Log("Jumped");
-        rb.velocity = new Vector3(0, 10.0f, 0);
+        Debug.LogError("Doot");
+        canJump = true;
+        rb.AddForce(0, 10, 0,ForceMode.Impulse);
     }
 }

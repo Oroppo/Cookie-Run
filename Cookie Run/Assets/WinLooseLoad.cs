@@ -1,7 +1,7 @@
 using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
-
+using UnityEngine.SceneManagement;
 public class WinLooseLoad : MonoBehaviour
 {
     public GameObject Player;
@@ -14,6 +14,16 @@ public class WinLooseLoad : MonoBehaviour
     // Update is called once per frame
     void Update()
     {
-        
+        if (Player.transform.position.y < -30)
+        {
+            SceneManager.LoadScene("LoseScreen");
+        }
+    }
+    private void OnTriggerEnter(Collider other)
+    {
+        if (other.gameObject.name == "wew")
+        {
+            SceneManager.LoadScene("WinScreen");
+        }
     }
 }

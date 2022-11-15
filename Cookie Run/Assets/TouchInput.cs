@@ -16,6 +16,7 @@ public class TouchInput : MonoBehaviour
     }
     public void Jump()
     {
-        rb.velocity += new Vector3(0, 1, 0);
+        Debug.Log("Jumped");
+        rb.velocity = new Vector3(0, 10.0f, 0);
     }
 }
